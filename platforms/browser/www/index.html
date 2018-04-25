@@ -300,7 +300,7 @@ Soorten die misschien af en toe als dwaalgast langskomen, zijn weggelaten om de 
 
 
 
-<button style=';margin-left:16%' onclick="window.plugins.socialsharing.share('Ik vond een leuke eenden- en ganzenapp, iets voor jou?', 'Eenden, ganzen en zwanen', 'http://www.stipnet.nl/apps/mallardhi.png', 'https://play.google.com/store/apps/details?id=nl.stippen.eendvogels')"><img src="img/deel.png" width="20"  border="0" alt="">&nbsp;Deel deze App</button>
+<button style=';margin-left:16%' onclick="window.plugins.socialsharing.share('Ik vond een leuke eenden- en ganzenapp, iets voor jou?', 'Eenden, ganzen en zwanen', 'http://www.stipnet.nl/apps/mallardhi.jpg', 'https://play.google.com/store/apps/details?id=nl.stippen.eendvogels')"><img src="img/deel.png" width="20"  border="0" alt="">&nbsp;Deel deze App</button>
 <br>
 <!--     -->
 
@@ -579,8 +579,8 @@ class="w3-btn w3-round-xlarge w3-border w3-white" id=next>Volgende</button>  <br
 	  Deze App is gemaakt door stichting Stippen.nl, die u misschien kent van 
 	  <a onclick="window.open('http://www.stippen.nl');" style='text-decoration:underline'> Stippen.nl, lieveheersbeestjes van Nederland en Belgi&euml;</a><br><br>
 	  Veel plezier gewenst met deze App, en we hopen dat dit het begin is van een prettige natuurstudie!<br>
-	    <br><br>
-		</div>
+	    <br><br><small>Opmerking: <i>Bij de informatie vindt u een indeling. Deze is niet taxonomisch consequent, meer informatief. Onder het geslacht Mergus vallen zowel de Zaagbekken als de Zee-eenden. Branta, Anser, Cygnus en Mergus zijn geslachten; Duikeneenden (Aythyinae), Grondeleenden (Anatini) en Tadorninae zijn onderfamilies;  Cairnini is een parafyletische groep.</i></small>
+		</div><br><br><br><br><br> 
     </div>
   </div>
 </div>
@@ -599,7 +599,7 @@ class="w3-btn w3-round-xlarge w3-border w3-white" id=next>Volgende</button>  <br
 	  <br><br>
 	  <div style='font-size:9pt!important;font-family:verdana!important;padding:20px'>
 
-<small>Opmerking: <i>Bij de informatie vindt u een indeling. Deze is niet taxonomisch consequent, meer informatief. Onder het geslacht Mergus vallen zowel de Zaagbekken als de Zee-eenden. Branta, Anser, Cygnus en Mergus zijn geslachten; Duikeneenden (Aythyinae), Grondeleenden (Anatini) en Tadorninae zijn onderfamilies;  Cairnini is een parafyletische groep.</i></small>
+
 </div><br><br><br><br><br>
 
 	    <br><br>
@@ -609,11 +609,16 @@ class="w3-btn w3-round-xlarge w3-border w3-white" id=next>Volgende</button>  <br
 </div>
 
 <!-- Splash -->
-<div id="splash" class="w3-modal  w3-animate-zoomout splash" style='padding-top:10px;animation-fill-mode: forwards;animation-delay: 3s;' onclick="closeme(5)"  >
+
+<div id="splash" class="w3-modal  w3-animate-zoomout splash" style='display:block;padding-top:10px;animation-fill-mode: forwards;animation-delay: 3s;' onclick="closeme(5)"  >
   <div class="w3-modal-content">
     <div class="w3-container splash" 
       class="w3-button w3-display-topright"><br>
       <img id=foto style='width:100%;max-width:300px' src="img/duck.png">
+	  <div style='position:absolute;display:table;top:70px;left:16%;width:300px;margin:0 auto;border:0px solid red'>
+	  <img id="foto1" width="125"  style='border:4px solid gray' alt="">&nbsp;&nbsp;&nbsp;
+	  <img id="foto2" width="125"  style='border:4px solid gray'  alt="">
+	  </div>
 	  
 	  <div class=tekst style='position:absolute;font-size:12pt;color:gray;top:200px'><img src="img/duckb.png" style='float:right;padding:20px;max-width:200px'>
 	  De meeste foto's zijn (c) Gerard Visser, met bijdragen van Jacob Molenaar en Kees van der Krieke.<br><br>
@@ -633,6 +638,11 @@ class="w3-btn w3-round-xlarge w3-border w3-white" id=next>Volgende</button>  <br
     <script type="text/javascript">
         app.initialize();
     </script>
+	<script>
+	var x = Math.floor((Math.random() * 43) + 1);
+    document.getElementById("foto1").src = "img/eendfoto" + x + ".jpg";
+	document.getElementById("foto2").src = "img/eendfotob" + x + ".jpg";
+</script>
 </body>
 
 </html>

@@ -609,11 +609,16 @@ class="w3-btn w3-round-xlarge w3-border w3-white" id=next>Volgende</button>  <br
 </div>
 
 <!-- Splash -->
+
 <div id="splash" class="w3-modal  w3-animate-zoomout splash" style='display:block;padding-top:10px;animation-fill-mode: forwards;animation-delay: 3s;' onclick="closeme(5)"  >
   <div class="w3-modal-content">
     <div class="w3-container splash" 
       class="w3-button w3-display-topright"><br>
       <img id=foto style='width:100%;max-width:300px' src="img/duck.png">
+	  <div style='position:absolute;display:table;top:70px;left:16%;width:300px;margin:0 auto;border:0px solid red'>
+	  <img id="foto1" width="125"  style='border:4px solid gray' alt="">&nbsp;&nbsp;&nbsp;
+	  <img id="foto2" width="125"  style='border:4px solid gray'  alt="">
+	  </div>
 	  
 	  <div class=tekst style='position:absolute;font-size:12pt;color:gray;top:200px'><img src="img/duckb.png" style='float:right;padding:20px;max-width:200px'>
 	  De meeste foto's zijn (c) Gerard Visser, met bijdragen van Jacob Molenaar en Kees van der Krieke.<br><br>
@@ -633,6 +638,11 @@ class="w3-btn w3-round-xlarge w3-border w3-white" id=next>Volgende</button>  <br
     <script type="text/javascript">
         app.initialize();
     </script>
+	<script>
+	var x = Math.floor((Math.random() * 43) + 1);
+    document.getElementById("foto1").src = "img/eendfoto" + x + ".jpg";
+	document.getElementById("foto2").src = "img/eendfotob" + x + ".jpg";
+</script>
 </body>
 
 </html>
